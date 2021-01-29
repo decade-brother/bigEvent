@@ -23,8 +23,8 @@
             <ul class="layui-nav layui-layout-right">
                 <li class="layui-nav-item">
                     <a href="javascript:;">
-                        <img class="avatar" src="../assets/images/sample.jpg" alt="">
-                        <span class="text-avatar">A</span>
+                        <img class="avatar" src="../assets/images/sample.jpg" alt="" style="display: none;">
+                        <span class="text-avatar" style="display: none;">A</span>
                         <span class="person-center">个人中心</span>
                     </a>
                     <dl class="layui-nav-child">
@@ -33,7 +33,7 @@
                         <dd><a href="">重置密码</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href=""><span class="iconfont icon-tuichu"></span>退出</a></li>
+                <li class="layui-nav-item"><a href="javascript:;" class="loginOut"><span class="iconfont icon-tuichu"></span>退出</a></li>
             </ul>
         </div>
 
@@ -42,9 +42,9 @@
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree " lay-shrink="all" lay-filter="test">
                     <li class="user-info">
-                        <img class="avatar" src="../assets/images/sample.jpg" alt="">
-                        <span class="text-avatar">A</span>
-                        <span class="nickname">欢迎 xxx</span>
+                        <img class="avatar" src="../assets/images/sample.jpg" alt="" style="display: none;">
+                        <span class="text-avatar" style="display: none;">A</span>
+                        <span class="nickname" style="display: none;">欢迎 xxx</span>
                     </li>
                     <li class="layui-nav-item layui-nav-itemed layui-this">
                         <a class="" href="javascript:;"><span class="iconfont icon-home"></span>首页</a>
@@ -72,7 +72,7 @@
 
         <div class="layui-body">
             <!-- 内容主体区域 -->
-            <iframe id="fm" src="./dashboard.html" frameborder="0"></iframe>
+            <iframe name="fm" src="./dashboard.html" frameborder="0"></iframe>
         </div>
 
         <div class="layui-footer">
