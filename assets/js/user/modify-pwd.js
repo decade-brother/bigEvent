@@ -15,7 +15,9 @@ $(function() {
             if (res.status !== 0) {
                 return layer.msg('修改密码失败')
             }
-            return layer.msg('修改密码成功')
+            layer.msg('修改密码成功')
+            window.parent.location.href = '../../../home/login.html'
+            localStorage.removeItem('token')
         })
     })
 })

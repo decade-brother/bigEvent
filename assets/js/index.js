@@ -12,7 +12,7 @@ function getPersonInfo() {
         //结构赋值data
         const { data } = res
         //判断name值，如果有nickname即返回nickname，如果没有即返回username
-        const name = data.nickname || data.username
+        let name = data.nickname || data.username
 
         $('.nickname').text(`欢迎 ${name}`)
             //判断返回值是否由图片的src
@@ -20,6 +20,7 @@ function getPersonInfo() {
             //如果有，就设置给头像，并把字体头像隐藏
             $('.avatar').prop('src', data.user_pic).show()
             $('.text-avatar').hide()
+            $('.nickname').show()
         } else {
             //否则隐藏头像，显示字体头像
             $('.avatar').hide()

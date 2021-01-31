@@ -14,7 +14,7 @@ $(function() {
     initUserInfo()
 
     form.verify({
-        nick: [/^\w{1,6}$/, '昵称长度必须在1~6位之间']
+        nick: [/^\w{1,16}$/, '昵称长度必须在1~16位之间']
     })
     $('.edit-userInfo').submit(function(e) {
         e.preventDefault()
