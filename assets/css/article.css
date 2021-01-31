@@ -1,0 +1,19 @@
+body {
+    padding: 15px;
+    background-color: #f2f3f5;
+}
+
+.head {
+    height: 50px;
+    line-height: 50px;
+}
+
+.add-btn {
+    float: right;
+    margin-top: 6px;
+}
+
+.layui-form {
+    padding-top: 25px;
+    padding-right: 35px;
+}
