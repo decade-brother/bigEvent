@@ -12,7 +12,7 @@ $(function() {
             const htmlStr = template('tpl', res)
                 // $('.cateTable').empty()
                 // $('.cateTable').append(htmlStr)
-            $('.cateTable').html(htmlStr)
+            $('tbody').html(htmlStr)
         })
     }
     //点击添加后，弹出模态框
