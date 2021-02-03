@@ -68,7 +68,7 @@
         <tr>
             <td>{{$value.title}}</td>
             <td>{{$value.cate_name}}</td>
-            <td>{{$value.pub_date}}</td>
+            <td>{{$value.pub_date | dateFormat}}</td>
             <td>{{$value.state}}</td>
             <td>
                 <button type="button" data-id="{{$value.Id}}" class="layui-btn  layui-btn-xs edit-btn">编辑</button>
@@ -78,7 +78,7 @@
         {{/each}}
     </script>
 
-
+    <script src="../assets/lib/moment.js"></script>
     <script src="../assets/lib/tinymce/tinymce.min.js"></script>
     <script src="../assets/lib/tinymce/tinymce_setup.js"></script>
     <script src="../assets/lib/jquery.js "></script>

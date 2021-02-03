@@ -27,9 +27,14 @@ $(function() {
     function renderList() {
         axios.get('/my/article/list', { params: query }).then(res => {
             console.log(res);
+
+            template.defaults.imports.dateFormat = function(date) {
+                return moment(date).format('YYYY/MM/DD HH:mm:ss')
+            };
             var htmlStr = template('tpl', res)
             $('tbody').html(htmlStr)
-                //4.页面一加载过程中，也需要加载分页器等一系列页面样式
+
+            //4.页面一加载过程中，也需要加载分页器等一系列页面样式
             renderPage(res.total)
         })
     }
@@ -69,6 +74,9 @@ $(function() {
             console.log(state);
             query.cate_id = cate_id
             query.state = state
+
+            //优化操作，当发送筛选请求之后，必须选择第一页
+            query.pagenum = 1
                 //再次调用table渲染函数
             renderList()
         })
@@ -98,5 +106,13 @@ $(function() {
             layer.close(index)
             renderList()
         });
+    })
+
+    //7.点击编辑，跳转到编辑页面
+    $(document).on('click', '.edit-btn', function() {
+        const id = $(this).data('id')
+
+        location.href = `./edit.html?id=${id}`
+        window.parent.$('#edit-list').click()
     })
 })
