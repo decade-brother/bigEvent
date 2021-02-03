@@ -31,10 +31,17 @@ function getPersonInfo() {
 }
 //调用函数
 getPersonInfo()
-    //给推出按钮绑定点击事件
+    // 给推出按钮绑定点击事件
 $('.loginOut').click(function() {
-    //点击之后，清楚本地加载的token
-    localStorage.removeItem('token')
-        //页面跳转至登录页面
-    location.href = './login.html'
-})
+    layer.confirm('确认退出吗?', { icon: 3, title: '提示' }, function(index) {
+        //点击之后，清楚本地加载的token
+        localStorage.removeItem('token')
+            //页面跳转至登录页面
+        location.href = './login.html'
+        layer.close(index);
+    });
+    // //点击之后，清楚本地加载的token
+    // localStorage.removeItem('token')
+    //     //页面跳转至登录页面
+    // location.href = './login.html'
+}) 
